@@ -5,7 +5,7 @@ import WeatherDisplay from './WeatherDisplay';
 
 const App = () => {
 
-  const [weatherData, setWeatherData] = useState({temperature: 25, condition:"Sunny"});
+  const [weatherData, setWeatherData] = useState({temperature: 25, conditions:"Sunny"});
   
   const handleTempChange = (event) =>{
     const newTemp = event.target.value;
@@ -18,7 +18,7 @@ const App = () => {
     const newCond = event.target.value;
     setWeatherData((prevCond) => ({
       ...prevCond,
-      condition: newCond,
+      conditions: newCond,
     }));
   };
 
@@ -29,7 +29,7 @@ const App = () => {
           <input type="number" onChange={handleTempChange} value={weatherData.temperature}></input>
         </label>
         <label className="labels-style">Enter Condition: 
-          <input type="text" onChange={handleCondChange} value={weatherData.condition}></input>
+          <input type="text" onChange={handleCondChange} value={weatherData.conditions}></input>
         </label>
       </div>
       <div className="output-container">
