@@ -6,7 +6,7 @@ function WeatherDisplay({weather}) {
     return (
         <div>
             <p style={{color: temperatureColor}}>Temperature: {temperature}</p>  
-            <span style={{color: temperatureColor}}>Condition: {condition}</span>
+            <span style={{color: temperatureColor}}>Conditions: {condition}</span>
         </div>
     )
 }
